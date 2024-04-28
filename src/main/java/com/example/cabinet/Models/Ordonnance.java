@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "cabinet")
+@Table(name = "Ordonnance")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,8 +25,8 @@ public class Ordonnance {
   String doctorName ;
   String doctorSpecialization ;
   String dateIssued ;
-  @OneToMany(mappedBy = "ordonnance",cascade = CascadeType.ALL,orphanRemoval = true)
-  List<Medication> medications = new ArrayList<>();
+//  @OneToMany(mappedBy = "ordonnance",cascade = CascadeType.ALL,orphanRemoval = true)
+//  List<Medication> medications = new ArrayList<>();
   String pharmacyNotes ;
 
 }

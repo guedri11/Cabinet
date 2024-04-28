@@ -1,0 +1,19 @@
+GET http://localhost:8080/pc/getPatients
+Content-Type: application/json
+
+###
+GET http://localhost:8080/mc/gm
+Content-Type: application/json
+
+###
+POST http://localhost:8080/pc/add_patient
+Content-Type: application/json
+
+{
+  "adresse": "Kabaria",
+  "email": "email",
+  "age": 20,
+  "nom": "content",
+  "prenom": "content",
+  "telephone": "98521452"
+}

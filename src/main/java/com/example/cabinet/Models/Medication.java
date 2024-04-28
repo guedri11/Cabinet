@@ -20,7 +20,7 @@ public class Medication {
     int Duration;
     String route;
     String instructions;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "prescriptionId")
-    Ordonnance ordonnance;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "prescriptionId" , insertable = false, updatable = false)
+
 }

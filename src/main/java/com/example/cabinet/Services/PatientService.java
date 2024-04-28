@@ -7,8 +7,8 @@ import java.util.List;
 
 
 public interface PatientService {
-    public List<Patient> getAllPatients();
-    public boolean addPatient(Patient patient);
+     List<Patient> getAllPatients();
+     boolean addPatient(Patient patient);
 
 
 }
