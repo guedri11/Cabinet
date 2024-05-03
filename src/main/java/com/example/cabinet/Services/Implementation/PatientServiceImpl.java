@@ -25,6 +25,7 @@ public class PatientServiceImpl implements PatientService {
            PatientRepository.save(patient);
            return true;
        }catch (Exception se){
+           se.printStackTrace();
            return false;
        }
     }
