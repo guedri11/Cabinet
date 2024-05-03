@@ -17,3 +17,6 @@ Content-Type: application/json
   "prenom": "content",
   "telephone": "98521452"
 }
+###
+GET http://localhost:8080/oc/gpdf?data=1
+Content-Type: application/json

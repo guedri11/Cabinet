@@ -21,6 +21,4 @@ public class Patient {
     private String telephone ;
     private int age;
 
-
-
 }
