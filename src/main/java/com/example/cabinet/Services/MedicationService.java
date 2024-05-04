@@ -8,4 +8,6 @@ public interface MedicationService {
     boolean addMedication(Medication medication);
     List<Medication> getAllMedications();
     Medication getMedicationByName(String name);
+    boolean updateMedication(Medication medication);
+    boolean deleteMedication(String id);
 }

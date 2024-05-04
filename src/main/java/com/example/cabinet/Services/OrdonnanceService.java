@@ -12,5 +12,8 @@ public interface OrdonnanceService {
     boolean addOrdonnance(Ordonnance ordonnance);
     List<Ordonnance> getOrdonnance();
     Ordonnance getOrdonnanceById(String id);
+    boolean updateOrdonnance(Ordonnance ordonnance);
+    boolean deleteOrdonnance(String id);
+
 }
 

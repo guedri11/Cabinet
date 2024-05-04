@@ -11,11 +11,12 @@ import lombok.*;
 @NoArgsConstructor
 public class Patient {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nom ;
     private String prenom ;
     private String adresse ;
-    @Column(unique = true,name = "email",nullable = false)
+    @Column(name = "email",nullable = false)
     private String email ;
     @Column(unique = true,length = 8)
     private String telephone ;

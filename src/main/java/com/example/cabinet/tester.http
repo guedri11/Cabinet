@@ -2,21 +2,125 @@ GET http://localhost:8080/pc/getPatients
 Content-Type: application/json
 
 ###
-GET http://localhost:8080/mc/gm
-Content-Type: application/json
-
-###
 POST http://localhost:8080/pc/add_patient
 Content-Type: application/json
 
 {
-  "adresse": "Kabaria",
-  "email": "email",
-  "age": 20,
-  "nom": "content",
-  "prenom": "content",
-  "telephone": "98521452"
+  "nom": "John",
+  "prenom": "Doe",
+  "adresse": "123 Main Street",
+  "email": "john.doe@example.com",
+  "telephone": "12345678",
+  "age": 30
 }
 ###
+GET http://localhost:8080/pc/getPatientById?id=1
+Content-Type: application/json
+
+###
+PUT http://localhost:8080/pc/update_patient
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nom": "Updated Name",
+  "prenom": "Updated Prenom",
+  "adresse": "Updated Address",
+  "email": "updated.email@example.com",
+  "telephone": "98765431",
+  "age": 35
+}
+###
+DELETE http://localhost:8080/pc/delete_patient
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nom": "Updated Name",
+  "prenom": "Updated Prenom",
+  "adresse": "Updated Address",
+  "email": "updated.email@example.com",
+  "telephone": "987654321",
+  "age": 35
+}
+
+###
+//
+
+GET http://localhost:8080/oc/getOrdonnances
+Content-Type: application/json
+
+###
+POST http://localhost:8080/oc/add_ordonnance
+Content-Type: application/json
+
+{
+  "patientId": 1,
+  "patientAge": 20,
+  "patientGender": "Male",
+  "patientName": "John Doe",
+  "doctorName": "Dr. Smith",
+  "doctorSpecialization": "Cardiologist",
+  "dateIssued": "2024-05-03",
+  "pharmacyNotes": "Take medication with food."
+}
+###
+//GET http://localhost:8080/oc/getOrdonnanceById?id=1
+//Content-Type: application/json
+
+###
+PUT http://localhost:8080/oc/update_ordonnance
+Content-Type: application/json
+
+{
+  "prescriptionId": 1,
+  "patientId": 1,
+  "patientAge": 30,
+  "patientGender": "Male",
+  "patientName": "Updated Patient",
+  "doctorName": "Dr. Updated",
+  "doctorSpecialization": "Updated Specialization",
+  "dateIssued": "2024-05-04",
+  "pharmacyNotes": "Updated notes."
+}
+###
+DELETE http://localhost:8080/oc/delete_ordonnance?id=1
+Content-Type: application/json
+
+###
 GET http://localhost:8080/oc/gpdf?data=1
+Content-Type: application/json
+
+######
+######
+
+GET http://localhost:8080/mc/gm
+Content-Type: application/json
+###
+POST http://localhost:8080/mc/add_med
+Content-Type: application/json
+
+{
+  "medicineName": "Paracetamol",
+  "dosage": "500 mg",
+  "frequency": "Once a day",
+  "duration": 7,
+  "route": "Oral",
+  "instructions": "Take with water after meal."
+}
+###
+PUT http://localhost:8080/mc/update_med
+Content-Type: application/json
+
+{
+  "medicationId": 2,
+  "medicineName": "Paracetamol",
+  "dosage": "500 mg",
+  "frequency": "Twice a day",
+  "duration": 6,
+  "route": "Oral",
+  "instructions": "Take with water after meal."
+}
+###
+DELETE http://localhost:8080/mc/delete_med?id=1
 Content-Type: application/json

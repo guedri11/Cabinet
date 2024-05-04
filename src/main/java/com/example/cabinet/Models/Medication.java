@@ -14,6 +14,8 @@ import lombok.Setter;
 @Setter
 public class Medication {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    int medicationId;
     String medicineName;
     String dosage;
     String frequency;

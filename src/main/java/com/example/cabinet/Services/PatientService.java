@@ -8,7 +8,9 @@ import java.util.List;
 
 public interface PatientService {
      List<Patient> getAllPatients();
+     Patient getPatientById(int id);
      boolean addPatient(Patient patient);
-
+     boolean updatePatient(Patient patient);
+     boolean deletePatient(Patient patient);
 
 }

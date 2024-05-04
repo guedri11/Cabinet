@@ -26,6 +26,7 @@ OrdonnanceRepository ordonnanceRepository;
 
             return  true ;
         }catch (Exception e){
+            e.printStackTrace();
             return false;
         }
 
@@ -39,5 +40,27 @@ OrdonnanceRepository ordonnanceRepository;
     @Override
     public Ordonnance getOrdonnanceById(String id) {
         return ordonnanceRepository.findById(id).get();
+    }
+
+    @Override
+    public boolean updateOrdonnance(Ordonnance ordonnance) {
+        try {
+            ordonnanceRepository.save(ordonnance);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
+    public boolean deleteOrdonnance(String id) {
+        try {
+            ordonnanceRepository.deleteById(id);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

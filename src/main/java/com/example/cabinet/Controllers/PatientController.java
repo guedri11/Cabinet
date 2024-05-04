@@ -19,8 +19,24 @@ public class PatientController {
     public boolean addPatient(@RequestBody Patient patient){
         return patientService.addPatient(patient);
     }
+
     @GetMapping("/getPatients")
     public List<Patient> getPatients(){
         return patientService.getAllPatients();
+    }
+
+    @GetMapping("/getPatientById")
+    public Patient getPatientById(@RequestParam int id){
+        return patientService.getPatientById(id);
+    }
+
+    @PutMapping("/update_patient")
+    public boolean updatePatient(@RequestBody Patient patient) {
+        return patientService.updatePatient(patient);
+    }
+
+    @DeleteMapping("/delete_patient")
+    public boolean deletePatient(@RequestBody Patient patient) {
+        return patientService.deletePatient(patient);
     }
 }
